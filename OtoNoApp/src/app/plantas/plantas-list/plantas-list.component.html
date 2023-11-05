@@ -1,13 +1,14 @@
-<div> 
-  <img src="OtoNoApp\src\assets\Fondo.png" class="img-fluid" alt="Imagen" />
-</div>
 
 <div class="container-fluid">
+  <h1> Vivero Otoño</h1>
+  <div> 
+    <img src="https://raw.githubusercontent.com/DavidCdajud/ParcialAngular/main/OtoNoApp/src/assets/Fondo.png" class="img-fluid" alt="Imagen" />
+  </div>
   <div class="col-6">
     <table class="table">
       <thead>
         <tr>
-          <th class="h4"># </th>
+          <th class="h4">#</th>
           <th class="h4">Nombre Común</th>
           <th class="h4">Tipo</th>
           <th class="h4">Clima</th>
@@ -16,7 +17,7 @@
       <tbody>
         <tr *ngFor="let c of plantas">
           <td>
-            <dd>{{ c.nombre_cientifico}}</dd>
+            <dd class="important-data">{{ c.nombre_cientifico }}</dd>
           </td>
           <td>
             <dd>{{ c.tipo }}</dd>
