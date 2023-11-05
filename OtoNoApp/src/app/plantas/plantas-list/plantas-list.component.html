@@ -1,35 +1,46 @@
-
 <div class="container-fluid">
-  <h1> Vivero Otoño</h1>
-  <div> 
-    <img src="https://raw.githubusercontent.com/DavidCdajud/ParcialAngular/main/OtoNoApp/src/assets/Fondo.png" class="img-fluid" alt="Imagen" />
-  </div>
+  <h1>Vivero Otoño</h1>
+  <div class="border"></div>
+  <img
+    src="https://raw.githubusercontent.com/DavidCdajud/ParcialAngular/main/OtoNoApp/src/assets/Fondo.png"
+    class="img-fluid"
+    alt="Imagen"
+  />
+  <div class="border" style="margin-bottom: 8px;"></div>
+
   <div class="col-6">
     <table class="table">
       <thead>
         <tr>
           <th class="h4">#</th>
-          <th class="h4">Nombre Común</th>
+          <th class="h4">Nombre común</th>
           <th class="h4">Tipo</th>
           <th class="h4">Clima</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let c of plantas">
+        <tr *ngFor="let p of plantas">
           <td>
-            <dd class="important-data">{{ c.nombre_cientifico }}</dd>
+            <dd>{{ p.id }}</dd>
           </td>
           <td>
-            <dd>{{ c.tipo }}</dd>
+            <dd>{{ p.nombre_comun }}</dd>
           </td>
           <td>
-            <dd>{{ c.tipo }}</dd>
+            <dd>{{ p.tipo }}</dd>
           </td>
           <td>
-            <dd>{{ c.clima }}</dd>
+            <dd>{{ p.clima }}</dd>
           </td>
         </tr>
       </tbody>
     </table>
+
+    <div *ngFor="let cantidad of cantidadPlantas | keyvalue">
+      
+      <p>Total plantas {{ cantidad.key }}: {{ cantidad.value }}</p>
+    </div>
   </div>
+  <p id="footer">Contact us: +57 3102105253 - info@viveroelotonio.com - @viveroelotonio</p>
+
 </div>
